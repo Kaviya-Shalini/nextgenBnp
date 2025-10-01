@@ -16,7 +16,7 @@ public class StockController {
     private StockService stockService;
 
     // Get all stock symbols
-    @GetMapping("/")
+    @GetMapping
     public List<String> getAllStocks() {
         return stockService.getAllStockSymbols();
     }

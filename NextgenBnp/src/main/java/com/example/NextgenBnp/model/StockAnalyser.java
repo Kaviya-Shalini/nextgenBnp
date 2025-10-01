@@ -1,5 +1,6 @@
 package com.example.NextgenBnp.model;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Map;
 
@@ -8,6 +9,7 @@ public class StockAnalyser {
 
     @Id
     private String id;
+    @Indexed(unique = true)
     private String stockSymbol;
     private Map<String, Object> parameters; // flexible to hold different parameter types
 
